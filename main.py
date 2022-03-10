@@ -4,9 +4,9 @@ from twilio.rest import Client
 # Passo a passo da solução (lógica de programação)
 
 # Your Account SID from twilio.com/console
-account_sid = "AC19ea25a8dd167cfbfe24ccf73d4167c8"
+account_sid = ""
 # Your Auth Token from twilio.com/console
-auth_token = "49f7d69d932d9500ec0926185c8626d4"
+auth_token = ""
 client = Client(account_sid, auth_token)
 
 
@@ -24,8 +24,8 @@ for mes in lista_meses:                                                   # for 
         vendas = tabela_vendas.loc[tabela_vendas['Vendas'] > 55000, 'Vendas'].values[0]
         print(f'No mês de {mes}, \nos vendedores: {vendedor}, bateram as metas com {vendas} no total de vendas')
         message = client.messages.create(
-             to="+5511985789135",
-             from_="+1256733-6276",
+             to="+",
+             from_="+",
              body=f"Parabéns, {vendedor}! você bateu a meta mensal de R$55.000, vendendo um total de {vendas} e ganhou uma viagem para Búzios no fim do ano!")
         print(message.sid)
 # Para cada arquivo:
